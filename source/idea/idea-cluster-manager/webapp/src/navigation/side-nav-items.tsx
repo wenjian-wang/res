@@ -27,7 +27,7 @@ export const IdeaSideNavItems = (context: AppContext): SideNavigationProps.Item[
 
     const userNav: any = {
         type: "section",
-        text: "Desktops",
+        text: "Intel VDE Desktops",
         defaultExpanded: true,
         items: [],
     };
@@ -38,6 +38,11 @@ export const IdeaSideNavItems = (context: AppContext): SideNavigationProps.Item[
             type: "link",
             text: "My virtual desktops",
             href: "#/home/virtual-desktops",
+        });
+        userNav.items.push({
+            type: "link",
+            text: "Intel virtual desktops",
+            href: "#/home/virtual-desktops-intel",
         });
         userNav.items.push({
             type: "link",

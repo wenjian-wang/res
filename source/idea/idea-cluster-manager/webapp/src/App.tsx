@@ -23,6 +23,7 @@ import VirtualDesktopDashboard from "./pages/virtual-desktops/virtual-desktop-da
 import VirtualDesktopSessions from "./pages/virtual-desktops/virtual-desktop-sessions";
 import VirtualDesktopSoftwareStacks from "./pages/virtual-desktops/virtual-desktop-software-stacks";
 import MyVirtualDesktopSessions from "./pages/virtual-desktops/my-virtual-desktop-sessions";
+import MyVirtualDesktopSessionsIntel from "./pages/virtual-desktops/my-virtual-desktop-sessions-intel";
 import VirtualDesktopSettings from "./pages/virtual-desktops/virtual-desktop-settings";
 import VirtualDesktopSessionDetail from "./pages/virtual-desktops/virtual-desktop-session-detail";
 import VirtualDesktopDebug from "./pages/virtual-desktops/virtual-desktop-debug";
@@ -521,6 +522,25 @@ class IdeaWebPortalApp extends Component<IdeaWebPortalAppProps, IdeaWebPortalApp
                             <IdeaAuthenticatedRoute isLoggedIn={this.state.isLoggedIn}>
                                 <MyVirtualDesktopSessions
                                     ideaPageId="my-virtual-desktop-sessions"
+                                    toolsOpen={this.state.toolsOpen}
+                                    tools={this.state.tools}
+                                    onToolsChange={this.onToolsChange}
+                                    onPageChange={this.onPageChange}
+                                    sideNavItems={this.state.sideNavItems}
+                                    sideNavHeader={this.state.sideNavHeader}
+                                    onSideNavChange={this.onSideNavChange}
+                                    onFlashbarChange={this.onFlashbarChange}
+                                    flashbarItems={this.state.flashbarItems}
+                                />
+                            </IdeaAuthenticatedRoute>
+                        }
+                    />
+                    <Route
+                        path="/home/virtual-desktops-intel"
+                        element={
+                            <IdeaAuthenticatedRoute isLoggedIn={this.state.isLoggedIn}>
+                                <MyVirtualDesktopSessionsIntel
+                                    ideaPageId="my-virtual-desktop-sessions-intel"
                                     toolsOpen={this.state.toolsOpen}
                                     tools={this.state.tools}
                                     onToolsChange={this.onToolsChange}
